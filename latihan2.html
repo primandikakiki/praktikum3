@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Kalkulator Sederhana </title>
+<script language="javascript">
+	document.write("Dimodifikasi terakhir pada " + document.lastModified);
+ 	function kali(){
+ 		var bil1=parseFloat(document.kalkulator.bil1.value);
+ 		var bil2=parseFloat(document.kalkulator.bil2.value);
+ 		if (isNaN (bil1) == false && isNaN(bil2) == false){
+		var hasil=bil1*bil2;
+		document.kalkulator.hasil.value=hasil;
+		}
+		else{
+		alert("Masukkan inputan berupa angka!")
+		}
+	}
+ 	function bagi(){
+ 		var bil1=parseFloat(document.kalkulator.bil1.value);
+ 		var bil2=parseFloat(document.kalkulator.bil2.value);
+ 		if (isNaN (bil1) == false && isNaN(bil2) == false){
+		var hasil=bil1/bil2;
+		document.kalkulator.hasil.value=hasil;
+		}
+		else{
+		alert("Masukkan inputan berupa angka!")
+		}
+ 	}
+ 	function tambah(){
+ 		var bil1=parseFloat(document.kalkulator.bil1.value);
+ 		var bil2=parseFloat(document.kalkulator.bil2.value);
+ 		if (isNaN (bil1) == false && isNaN(bil2) == false){
+		var hasil=bil1+bil2;
+		document.kalkulator.hasil.value=hasil;
+		}
+		else{
+		alert("Masukkan inputan berupa angka!")
+		}
+ 	}
+ 	function kurang(){
+ 		var bil1=parseFloat(document.kalkulator.bil1.value);
+ 		var bil2=parseFloat(document.kalkulator.bil2.value);
+ 		if (isNaN (bil1) == false && isNaN(bil2) == false){
+		var hasil=bil1-bil2;
+		document.kalkulator.hasil.value=hasil;
+		}
+		else{
+		alert("Masukkan inputan berupa angka!")
+		}
+ 	}
+</script>
+<body>
+	<center><h1> Kalkulator Sederhana </h1></center>
+</body>
+<form name="kalkulator">
+<center>
+	<p><input type="text" name="bil1" placeholder="Masukan bilangan 1"></p>
+	<p><input type="text" name="bil2" placeholder="Masukan bilangan 2"></p>
+</center>
+<center>
+	<input type="button" value="*" onclick="kali()">
+	<input type="button" value="/" onclick="bagi()">
+	<input type="button" value="+" onclick="tambah()">
+	<input type="button" value="-" onclick="kurang()">
+	<input type="reset" value="clear">
+	<p><input type="text" name="hasil" placeholder="Hasil"></p>
+</center>	
+</form>
+</head>
+</html>
